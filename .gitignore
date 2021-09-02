@@ -1,0 +1,7 @@
+# Directories
+.git
+
+# Configuration files
+.env
+./portfolio/portfolio/settings.py
+
