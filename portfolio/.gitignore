@@ -1,1 +1,4 @@
 ./portfolio/settings.py
+
+
+./db.sqlite3
