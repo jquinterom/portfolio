@@ -1,7 +1,11 @@
+# Entorno virtual
 .env/
 
+# Cache
 portfolio/portfolio/settings.py
 portfolio/portfolio/__pycache__/
+portfolio/apps/core/__pycache__/
+portfolio/apps/./__pycache__/
 
 
 __pycache__
