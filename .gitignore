@@ -1,7 +1,7 @@
-# Directories
-.git
+.env/
 
-# Configuration files
-.env
-./portfolio/portfolio/settings.py
+portfolio/portfolio/settings.py
+portfolio/portfolio/__pycache__/
 
+
+__pycache__
