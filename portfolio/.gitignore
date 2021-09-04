@@ -1,8 +1,0 @@
-# Base de datos
-./db.sqlite3
-
-# configuraciones
-portfolio/settings.py
-
-# Cache
-portfolio/__pycache__/
