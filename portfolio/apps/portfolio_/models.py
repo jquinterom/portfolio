@@ -8,6 +8,7 @@ class ProjectType(models.Model):
     class Meta:
         verbose_name= "Tipo de proyecto"
         verbose_name_plural = "Tipos de proyectos"
+        ordering = ['title']
 
     def __str__(self):
         return str(self.title)
@@ -25,7 +26,7 @@ class Project (models.Model):
     class Meta:
         verbose_name = "proyecto"
         verbose_name_plural = "proyectos"
-        ordering = ['-created']
+        ordering = ['title']
 
     def __str__(self):
         return str(self.title)
