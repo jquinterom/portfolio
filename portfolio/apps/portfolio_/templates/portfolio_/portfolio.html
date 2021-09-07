@@ -25,7 +25,9 @@
                                 <ul class="list-inline filter-control" role="group" aria-label="Filter Control">
                                     <li class="list-inline-item tab-active" data-filter="*">All</li>
                                     <!-- list type portfolio-->
+                                    <!-- validandar que no se duplique los tipos de proyectos -->
                                     {% for item in projects %}
+                                        
                                         <li class="list-inline-item" data-filter=".{{ item.type_project.id }}">{{ item.type_project.title }}</li>
                                     {% endfor %}
                                 </ul>
