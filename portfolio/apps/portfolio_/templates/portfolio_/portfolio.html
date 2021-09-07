@@ -27,7 +27,6 @@
                                     <!-- list type portfolio-->
                                     <!-- validandar que no se duplique los tipos de proyectos -->
                                     {% for item in projects %}
-                                        
                                         <li class="list-inline-item" data-filter=".{{ item.type_project.id }}">{{ item.type_project.title }}</li>
                                     {% endfor %}
                                 </ul>
@@ -39,7 +38,7 @@
                             {% for item in projects %}
                                 <div class="single-item col-6 col-lg-4 {{ item.type_project.id }}">
                                     <a class="portfolio-item" href="{{ item.image.url }}" data-lightbox>
-                                        <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="{{ item.image.url }}">
+                                        <div class="portfolio-wrapper"><img class="img-fluid rounded mx-auto d-block img_portfolio" alt="Item" src="{{ item.image.url }}">
                                             <div class="item-content">
                                                 <h6 class="content-title">{{ item.title }}</h6><span class="content-more">{{ item.description }}</span>
                                             </div>
