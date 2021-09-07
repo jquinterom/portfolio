@@ -14,8 +14,6 @@
                             <div class="section-heading page-heading">
                                 <p class="section-description">Showcasing some of my best work</p>
                                 <h2 class="section-title">Portfolio</h2>
-
-        {{ projects }}
                                 <div class="animated-bar"></div>
                             </div>
                         </div>
@@ -27,75 +25,27 @@
                             <div class="col-12">
                                 <ul class="list-inline filter-control" role="group" aria-label="Filter Control">
                                     <li class="list-inline-item tab-active" data-filter="*">All</li>
-                                    <li class="list-inline-item" data-filter=".brand">Brand</li>
-                                    <li class="list-inline-item" data-filter=".design">Design</li>
-                                    <li class="list-inline-item" data-filter=".photos">Photos</li>
+                                    <!-- list type portfolio-->
+                                    {% for item in projectsTypes %}
+                                        <li class="list-inline-item" data-filter=".{{ item.id }}">{{ item.title }}</li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
-                        <!-- Thumbnail list-->
+                        <!-- Projects list-->
                         <div class="portfolio-grid row">
                             <!-- Single item-->
-                            <div class="single-item col-6 col-lg-4 design">
-                                <a class="portfolio-item" href="{% static 'core/img/item-1.jpg' %}" data-lightbox>
-                                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="{% static 'core/img/item-1.jpg' %}">
-                                        <div class="item-content">
-                                            <h6 class="content-title">Label Tag Mockup</h6><span class="content-more">More Info</span>
+                            {% for item in projects %}
+                                <div class="single-item col-6 col-lg-4 {{ item.type_project.id }}">
+                                    <a class="portfolio-item" href="{{ item.image.url }}" data-lightbox>
+                                        <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="{{ item.image.url }}">
+                                            <div class="item-content">
+                                                <h6 class="content-title">{{ item.title }}</h6><span class="content-more">{{ item.description }}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- Single item-->
-                            <div class="single-item col-6 col-lg-4 photos">
-                                <a class="portfolio-item" href="{% static 'core/img/item-2.jpg' %}" data-lightbox>
-                                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="{% static 'core/img/item-2.jpg' %}">
-                                        <div class="item-content">
-                                            <h6 class="content-title">3D Bag Mockup</h6><span class="content-more">More Info</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- Single item-->
-                            <div class="single-item col-6 col-lg-4 design">
-                                <a class="portfolio-item" href="{% static 'core/img/item-3.jpg' %}" data-lightbox>
-                                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="{% static 'core/img/item-3.jpg' %}">
-                                        <div class="item-content">
-                                            <h6 class="content-title">Modern Bag Design</h6><span class="content-more">More Info</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- Single item-->
-                            <div class="single-item col-6 col-lg-4 brand">
-                                <a class="portfolio-item" href="{% static 'core/img/item-4.jpg' %}" data-lightbox>
-                                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="{% static 'core/img/item-4.jpg' %}">
-                                        <div class="item-content">
-                                            <h6 class="content-title">Coffee Cup Design</h6><span class="content-more">More Info</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <!-- Single item-->
-                            <div class="single-item col-6 col-lg-4 brand">
-                                <a class="portfolio-item" href="{% static 'core/img/item-5.jpg' %}" data-lightbox>
-                                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="{% static 'core/img/item-5.jpg' %}">
-                                        <div class="item-content">
-                                            <h6 class="content-title">T-Shirt Design</h6><span class="content-more">More Info</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- Single item-->
-                            <div class="single-item col-6 col-lg-4 photos">
-                                <a class="portfolio-item" href="{% static 'core/img/item-6.jpg' %}" data-lightbox>
-                                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="{% static 'core/img/item-6.jpg' %}">
-                                        <div class="item-content">
-                                            <h6 class="content-title">Packaging Box Mockup</h6><span class="content-more">More Info</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
