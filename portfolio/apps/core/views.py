@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from ..portfolio_.models import Project
-from ..portfolio_.models import ProjectType
+from ..about.models import About
 
 
 def home(request):
@@ -14,4 +14,13 @@ def home(request):
         if(tp.type_project not in types_project):
             types_project.append(tp.type_project)
 
-    return render(request, "core/base.html", {'projects': projects, 'types_project': types_project})
+
+    # About information
+    about = About.objects.all()
+
+    return render(request, "core/base.html", 
+                  {
+                      'projects': projects, 
+                      'types_project': types_project,
+                      'about' : about,
+                  })
