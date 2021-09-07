@@ -16,5 +16,6 @@ media/
 # Data bases files
 portfolio/db.sqlite3
 
-# Folders
+# Migrations folders
 portfolio/apps/portfolio_/migrations/
+portfolio/apps/about/migrations/
