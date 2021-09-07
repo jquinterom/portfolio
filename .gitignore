@@ -8,4 +8,13 @@ portfolio/apps/core/__pycache__/
 portfolio/apps/./__pycache__/
 
 
-__pycache__
+__pycache__/
+
+# Media
+media/
+
+# Data bases files
+portfolio/db.sqlite3
+
+# Folders
+portfolio/apps/portfolio_/migrations/
