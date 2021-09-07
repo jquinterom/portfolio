@@ -7,7 +7,8 @@ class About(models.Model):
     country = models.CharField(verbose_name='País', max_length=50)
     city = models.CharField(verbose_name='Ciudad', max_length=50)
     description = models.TextField(verbose_name='Descripción')
-    curriculun_vitae = models.FileField(upload_to='files/curriculum/', verbose_name='CV')
+    curriculun_vitae = models.FileField(upload_to='about/curriculum/', verbose_name='CV')
+    photo = models.ImageField(upload_to='about/photo/', verbose_name='Foto')
     created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creación')
     updated = models.DateTimeField(auto_now=True, verbose_name='Fecha de actualización')
 
