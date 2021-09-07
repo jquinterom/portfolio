@@ -18,6 +18,7 @@ class Project (models.Model):
     description = models.TextField(verbose_name='Descripción')
     image = models.ImageField(verbose_name='Imagen', upload_to='projects')
     type_project = models.OneToOneField(ProjectType, on_delete=models.CASCADE, default=1)
+    active = models.BooleanField(default=True, verbose_name="Activo")
     created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creación')
     updated = models.DateTimeField(auto_now=True, verbose_name='Fecha de actualización')
 

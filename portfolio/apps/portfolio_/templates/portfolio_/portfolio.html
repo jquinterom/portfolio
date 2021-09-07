@@ -1,5 +1,4 @@
 {% load static %}
-
 <!-- Portfolio lightbox-->
 <div class="lightbox-wrapper" id="portfolio" data-simplebar>
     <div class="container">
@@ -26,8 +25,8 @@
                                 <ul class="list-inline filter-control" role="group" aria-label="Filter Control">
                                     <li class="list-inline-item tab-active" data-filter="*">All</li>
                                     <!-- list type portfolio-->
-                                    {% for item in projectsTypes %}
-                                        <li class="list-inline-item" data-filter=".{{ item.id }}">{{ item.title }}</li>
+                                    {% for item in projects %}
+                                        <li class="list-inline-item" data-filter=".{{ item.type_project.id }}">{{ item.type_project.title }}</li>
                                     {% endfor %}
                                 </ul>
                             </div>
