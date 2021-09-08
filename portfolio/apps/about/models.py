@@ -39,6 +39,7 @@ class SocialNetwork(models.Model):
     class Meta:
         verbose_name = "Red social"
         verbose_name_plural = "Redes sociales"
+        ordering = ['name']
 
     def __str__(self):
         return str(self.name)
