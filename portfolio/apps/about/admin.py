@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import About
-from .models import SocialNetwork
-from .models import Services
+from .models import About, SocialNetwork, Services
 
 
 class AboutAdmin(admin.ModelAdmin):
