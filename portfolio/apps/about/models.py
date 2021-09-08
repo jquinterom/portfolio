@@ -20,3 +20,25 @@ class About(models.Model):
     def __str__(self):
         return str(self.name)
 
+
+class SocialNetwork(models.Model):
+    FACEBOOK = 'ion-logo-facebook'
+    GITHUB = 'ion-logo-github'
+    LINKEDIN = 'ion-logo-linkedin'
+    SOCIAL_NETWORKS = [
+        (FACEBOOK, 'Facebook'),
+        (GITHUB, 'Github'),
+        (LINKEDIN, 'Linkedin'),
+    ]
+    name = models.CharField(max_length=50, verbose_name='Nombre Aplicación')
+    class_name = models.CharField(max_length=50, choices=SOCIAL_NETWORKS, default=FACEBOOK, verbose_name='Clase de aplicación')
+    link = models.CharField(max_length=2000, verbose_name='Enlace perfil')
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creación')
+    updated = models.DateTimeField(auto_now=True, verbose_name='Fecha de actualización')
+
+    class Meta:
+        verbose_name = "Red social"
+        verbose_name_plural = "Redes sociales"
+
+    def __str__(self):
+        return str(self.name)

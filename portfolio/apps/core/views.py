@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from ..portfolio_.models import Project
 from ..about.models import About
+from ..about.models import SocialNetwork
 
 
 def home(request):
@@ -17,10 +18,12 @@ def home(request):
 
     # About information
     about = About.objects.first()
+    social_networks = SocialNetwork.objects.all()
 
     return render(request, "core/base.html", 
                   {
                       'projects': projects, 
                       'types_project': types_project,
                       'about' : about,
+                      'social_networks': social_networks,
                   })
