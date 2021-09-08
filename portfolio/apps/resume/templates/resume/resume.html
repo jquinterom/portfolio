@@ -58,7 +58,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                {% for skill in skills%}
+                                {% for skill in skills1 %}
                                     <div class="single-skill" data-percentage="{{ skill.percentage }}">
                                         <div class="skill-info"><span class="skill-name">{{ skill.name }}</span><span class="skill-percentage"></span></div>
                                         <div class="progress skill-progress">
@@ -68,7 +68,7 @@
                                 {% endfor %}
                             </div>
                             <div class="col-12 col-md-6">
-                                {% for skill in skills%}
+                                {% for skill in skills2 %}
                                     <div class="single-skill" data-percentage="{{ skill.percentage }}">
                                         <div class="skill-info"><span class="skill-name">{{ skill.name }}</span><span class="skill-percentage"></span></div>
                                         <div class="progress skill-progress">

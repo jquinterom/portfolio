@@ -23,7 +23,16 @@ def home(request):
     # Resume
     education = Education.objects.all()
     experience = Experience.objects.all()
+    
     skills = Skill.objects.all()
+    len_skills = len(skills)
+    half = round(len_skills//2)
+    if(len_skills % 2 != 0):
+        # impar
+        half+=1 # Con esto se hace que la primera lista sea un objeto mas grande que la 2
+
+    skills1 = skills[:half]
+    skills2 = skills[half:]
 
     return render(request, "core/base.html", 
                   {
@@ -34,5 +43,6 @@ def home(request):
                       'services': services,
                       'education': education,
                       'experience': experience,
-                      'skills': skills,
+                      'skills1': skills1,
+                      'skills2': skills2,
                   })
