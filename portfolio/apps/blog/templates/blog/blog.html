@@ -1,0 +1,43 @@
+{% load static %}
+<!-- Blog lightbox-->
+<div class="lightbox-wrapper" id="blog" data-simplebar>
+    <div class="container">
+        <div class="lightbox-close">
+            <div class="close-btn" data-modal-close=""><span class="btn-line"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="lightbox-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-heading page-heading">
+                                <p class="section-description">Check out my latest blog posts</p>
+                                <h2 class="section-title">My Blog</h2>
+                                <div class="animated-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog section-->
+                    <div class="blog-section single-section">
+                        <div class="row justify-content-center">
+                            <!-- Single post-->
+                            {% for blog in blogs %}
+                                <div class="col-12 col-sm-8 col-lg-4">
+                                    <div class="card single-post">
+                                        <a class="post-img" href="{{ blog.link }}" {% if blog.link != '#'%} target='_blak' {% endif %}  ><img class="card-img-top img_portfolio" src="{{ blog.image.url }}" alt="Blog post"><span class="content-date">{{ blog.created|date:'d M, y' }}</span></a>
+                                        <div class="card-body post-content">
+                                                <h5 class="card-title content-title">{{ blog.title }}</h5>
+                                            </a>
+                                            <p class="card-text content-description">{{ blog.description }}<p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

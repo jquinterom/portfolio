@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 from ..portfolio_.models import Project
 from ..about.models import About, SocialNetwork, Services
 from ..resume.models import Education, Experience, Skill
+from ..blog.models import Blog
 
 
 def home(request):
@@ -34,6 +35,9 @@ def home(request):
     skills1 = skills[:half]
     skills2 = skills[half:]
 
+    # Blog
+    blogs = Blog.objects.all()
+
     return render(request, "core/base.html", 
                   {
                       'projects': projects, 
@@ -45,4 +49,5 @@ def home(request):
                       'experience': experience,
                       'skills1': skills1,
                       'skills2': skills2,
+                      'blogs': blogs,
                   })

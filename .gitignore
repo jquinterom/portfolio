@@ -20,3 +20,4 @@ portfolio/db.sqlite3
 portfolio/apps/portfolio_/migrations/
 portfolio/apps/about/migrations/
 portfolio/apps/resume/migrations/
+portfolio/apps/blog/migrations/
