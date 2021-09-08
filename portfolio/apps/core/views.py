@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, redirect
 from ..portfolio_.models import Project
 from ..about.models import About, SocialNetwork, Services
 from ..resume.models import Education, Experience, Skill
@@ -41,6 +41,20 @@ def home(request):
 
     # Contact
     contact_form = ContactForm()
+
+    # Manipulando el envio de correo
+    if request.method == 'POST':
+        contact_form = ContactForm(data=request.POST)
+
+        if(contact_form.is_valid()):
+            name = request.POST.get('name', '')
+            email = request.POST.get('email', '')
+            subject = request.POST.get('subject', '')
+            content = request.POST.get('content', '')
+
+            # Suponiendo que todo va OK, redireccionamos
+
+
 
     return render(request, "core/base.html", 
                   {
