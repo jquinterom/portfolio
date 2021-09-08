@@ -1,5 +1,6 @@
 from django.db import models
 
+# modelo de acerca de 
 class About(models.Model):
     name = models.CharField(max_length=50, verbose_name='Nombre')
     age = models.IntegerField(verbose_name='Edad')
@@ -21,6 +22,7 @@ class About(models.Model):
         return str(self.name)
 
 
+# modelo de redes sociales
 class SocialNetwork(models.Model):
     FACEBOOK = 'ion-logo-facebook'
     GITHUB = 'ion-logo-github'
@@ -43,3 +45,17 @@ class SocialNetwork(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+# Modelo de servicios
+class Services(models.Model):
+    WEB_DEVELOPMENT = "ion-logo-html5"
+    PYTHON = 'ion-logo-python'
+    
+    SERVICES = [
+        (WEB_DEVELOPMENT, 'Web development')
+    ]
+
+    name = models.CharField(max_length=30, verbose_name="Nombre")
+    description = models.CharField(max_length=200, verbose_name='Descripción', default="")
+    icon = models.CharField(max_length=50, choices=SERVICES, default=WEB_DEVELOPMENT, verbose_name='Icono de servicio')
+
