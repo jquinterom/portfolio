@@ -7,6 +7,7 @@ class Education(models.Model):
     institution = models.CharField(max_length=50, verbose_name='Institución')
     start_date = models.DateField(verbose_name='Fecha inicio')
     end_date = models.DateField(verbose_name='Fecha fin')
+    description_title = models.TextField(verbose_name="Descripción del titulo")
     created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creación')
     updated = models.DateTimeField(auto_now=True, verbose_name='Fecha de actualización')
 
