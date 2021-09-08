@@ -1,0 +1,87 @@
+{% load static %}
+<!-- Resume lightbox-->
+<div class="lightbox-wrapper" id="resume" data-simplebar>
+    <div class="container">
+        <div class="lightbox-close">
+            <div class="close-btn" data-modal-close=""><span class="btn-line"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="lightbox-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-heading page-heading">
+                                <p class="section-description">Check out my Resume</p>
+                                <h2 class="section-title">Resume</h2>
+                                <div class="animated-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Resume section-->
+                    <div class="resume-section single-section">
+                        <div class="row">
+                            <!-- Education part-->
+                            <div class="col-12 col-md-6">
+                                <div class="col-block education">
+                                    <h3 class="col-title">Education</h3>
+                                    {% for edu in education %}
+                                        <div class="resume-item"><span class="item-arrow"></span>
+                                            <h5 class="item-title">{{ edu.title }}</h5><span class="item-details">{{ edu.institution }} / {{ edu.start_date|date:'Y' }} - {{ edu.end_date|date:'Y' }}</span>
+                                            <p class="item-description">{{ edu.description_title }}</p>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <!-- Experience part-->
+                            <div class="col-12 col-md-6">
+                                <div class="col-block experience">
+                                    <h3 class="col-title">Experience</h3>
+                                    {% for exp in experience %}
+                                        <div class="resume-item"><span class="item-arrow"></span>
+                                            <h5 class="item-title">{{ exp.position }}</h5><span class="item-details">{{ exp.employer }} / {{ exp.start_date|date:'Y' }} - {{ exp.end_date|date:'Y' }}</span>
+                                            <p class="item-description">{{ exp.description_position }}</p>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skills section-->
+                    <div class="skills-section single-section">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-heading">
+                                    <p class="section-description">My level of knowledge in some tools</p>
+                                    <h2 class="section-title">My Skills</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                {% for skill in skills1 %}
+                                    <div class="single-skill" data-percentage="{{ skill.percentage }}">
+                                        <div class="skill-info"><span class="skill-name">{{ skill.name }}</span><span class="skill-percentage"></span></div>
+                                        <div class="progress skill-progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-12 col-md-6">
+                                {% for skill in skills2 %}
+                                    <div class="single-skill" data-percentage="{{ skill.percentage }}">
+                                        <div class="skill-info"><span class="skill-name">{{ skill.name }}</span><span class="skill-percentage"></span></div>
+                                        <div class="progress skill-progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -19,3 +19,4 @@ portfolio/db.sqlite3
 # Migrations folders
 portfolio/apps/portfolio_/migrations/
 portfolio/apps/about/migrations/
+portfolio/apps/resume/migrations/

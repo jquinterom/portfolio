@@ -1,8 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from ..portfolio_.models import Project
-from ..about.models import About
-from ..about.models import SocialNetwork
-from ..about.models import Services
+from ..about.models import About, SocialNetwork, Services
+from ..resume.models import Education, Experience, Skill
 
 
 def home(request):
@@ -21,6 +20,20 @@ def home(request):
     social_networks = SocialNetwork.objects.all()
     services = Services.objects.all()
 
+    # Resume
+    education = Education.objects.all()
+    experience = Experience.objects.all()
+    
+    skills = Skill.objects.all()
+    len_skills = len(skills)
+    half = round(len_skills//2)
+    if(len_skills % 2 != 0):
+        # impar
+        half+=1 # Con esto se hace que la primera lista sea un objeto mas grande que la 2
+
+    skills1 = skills[:half]
+    skills2 = skills[half:]
+
     return render(request, "core/base.html", 
                   {
                       'projects': projects, 
@@ -28,4 +41,8 @@ def home(request):
                       'about' : about,
                       'social_networks': social_networks,
                       'services': services,
+                      'education': education,
+                      'experience': experience,
+                      'skills1': skills1,
+                      'skills2': skills2,
                   })
