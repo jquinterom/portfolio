@@ -3,6 +3,7 @@ from ..portfolio_.models import Project
 from ..about.models import About, SocialNetwork, Services
 from ..resume.models import Education, Experience, Skill
 from ..blog.models import Blog
+from ..contact.forms import ContactForm
 
 
 def home(request):
@@ -38,6 +39,9 @@ def home(request):
     # Blog
     blogs = Blog.objects.all()
 
+    # Contact
+    contact_form = ContactForm()
+
     return render(request, "core/base.html", 
                   {
                       'projects': projects, 
@@ -50,4 +54,5 @@ def home(request):
                       'skills1': skills1,
                       'skills2': skills2,
                       'blogs': blogs,
+                      'contact_form': contact_form,
                   })
