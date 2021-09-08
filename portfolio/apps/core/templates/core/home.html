@@ -19,9 +19,9 @@
         <!-- Social media icons-->
         <div class="fixed-block block-right">
             <ul class="list-unstyled social-icons">
-                <li><a href="#0"><i class="icon ion-logo-facebook"></i></a></li>
-                <li><a href="#0"><i class="icon ion-logo-linkedin"></i></a></li>
-                <li><a href="#0"><i class="icon ion-logo-github"></i></a></li>
+                {% for sn in social_networks %}
+                    <li><a href="{{ sn.link }}" title="{{ sn.name }}"><i class="icon {{ sn.class_name }} "></i></a></li>
+                {% endfor %}
             </ul>
         </div>
     </div>
