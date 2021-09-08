@@ -1,0 +1,89 @@
+{% load static %}
+<!-- About lightbox-->
+<div class="lightbox-wrapper" id="about" data-simplebar>
+    <div class="container">
+        <div class="lightbox-close">
+            <div class="close-btn" data-modal-close=""><span class="btn-line"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="lightbox-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-heading page-heading">
+                                <p class="section-description">Get to know me</p>
+                                <h2 class="section-title">About Me</h2>
+                                <div class="animated-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Info section-->
+                    <div class="info-section single-section">
+                        <div class="row align-items-center">
+                            <!-- Picture part-->
+                            <div class="col-12 col-lg-5 info-img"><img class="img-fluid img-thumbnail" src="{{ about.photo.url }}" alt="About Picture"></div>
+                            <!-- Content part-->
+                            <div class="col-12 col-lg-7 info-content">
+                                <div class="content-block">
+                                    <h2 class="content-subtitle">Who am i?</h2>
+                                    <h6 class="content-title">{{ about.about_me }}</h6>
+                                    <div class="content-description">
+                                        <p> {{ about.description }} </p>
+                                    </div>
+                                    <address class="content-info">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 single-info"><span>Name:</span>
+                                                <p>{{ about.name }} </p>
+                                            </div>
+                                            <div class="col-12 col-md-6 single-info"><span>Email:</span>
+                                                <p><a href="mailto:emma@example.com">{{ about.email }}</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 single-info"><span>Age:</span>
+                                                <p>{{ about.age }}</p>
+                                            </div>
+                                            <div class="col-12 col-md-6 single-info"><span>From:</span>
+                                                <p>{{ about.city }}, {{ about.country }}</p>
+                                            </div>
+                                        </div>
+                                    </address>
+                                    <div class="d-block d-sm-flex align-items-center"><a class="btn content-download button-main button-scheme" target='_blank' href="{{ about.curriculum_vitae.url }}" role="button">Download CV</a>
+                                        <ul class="list-unstyled list-inline content-follow">
+                                            {% for sn in social_networks %}
+                                                <li class="list-inline-item"><a href="{{ sn.link }}" title="{{ sn.name }}"><i class="icon {{ sn.class_name }}"></i></a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Services section-->
+                    <div class="services-section single-section">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-heading">
+                                    <p class="section-description">Services I offer to my clients</p>
+                                    <h2 class="section-title">My Services</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            {% for service in services %}
+                            <!-- Single service-->
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-service"><i class="icon service-icon {{ service.icon_code }}"></i>
+                                    <h6 class="service-title">{{ service.name }}</h6>
+                                    <p class="service-description">{{ service.description }}<p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
