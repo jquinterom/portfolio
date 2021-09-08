@@ -21,34 +21,34 @@
                     <div class="info-section single-section">
                         <div class="row align-items-center">
                             <!-- Picture part-->
-                            <div class="col-12 col-lg-5 info-img"><img class="img-fluid img-thumbnail" src="{% static 'core/img/info-img.jpeg' %}" alt="About Picture"></div>
+                            <div class="col-12 col-lg-5 info-img"><img class="img-fluid img-thumbnail" src="{{ about.photo.url }}" alt="About Picture"></div>
                             <!-- Content part-->
                             <div class="col-12 col-lg-7 info-content">
                                 <div class="content-block">
                                     <h2 class="content-subtitle">Who am i?</h2>
-                                    <h6 class="content-title">I'm Jhon Quintero, a Software and Web Developer</h6>
+                                    <h6 class="content-title">{{ about.about_me }}</h6>
                                     <div class="content-description">
-                                        <p> I'm a software developer based in Colombia and I have been in the world of software developer for 7 years, in this time, I have developed business software and mobile applications for taking gas readings at home. I also help meet useful goals and objectives for my clients. I Being in constant evolution and learning helps me have more opportunity to innovate in products and shorten delivery times.  </p>
+                                        <p> {{ about.description }} </p>
                                     </div>
                                     <address class="content-info">
                                         <div class="row">
                                             <div class="col-12 col-md-6 single-info"><span>Name:</span>
-                                                <p>Jhon Quintero</p>
+                                                <p>{{ about.name }} </p>
                                             </div>
                                             <div class="col-12 col-md-6 single-info"><span>Email:</span>
-                                                <p><a href="mailto:emma@example.com">jfqm7710@gmail.com</a></p>
+                                                <p><a href="mailto:emma@example.com">{{ about.email }}</a></p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-12 col-md-6 single-info"><span>Age:</span>
-                                                <p>25</p>
+                                                <p>{{ about.age }}</p>
                                             </div>
                                             <div class="col-12 col-md-6 single-info"><span>From:</span>
-                                                <p>Huila , CO</p>
+                                                <p>{{ about.city }}, {{ about.country }}</p>
                                             </div>
                                         </div>
                                     </address>
-                                    <div class="d-block d-sm-flex align-items-center"><a class="btn content-download button-main button-scheme" href="#0" role="button">Download CV</a>
+                                    <div class="d-block d-sm-flex align-items-center"><a class="btn content-download button-main button-scheme" target='_blank' href="{{ about.curriculum_vitae.url }}" role="button">Download CV</a>
                                         <ul class="list-unstyled list-inline content-follow">
                                             <li class="list-inline-item"><a href="#0"><i class="icon ion-logo-linkedin"></i></a></li>
                                             <li class="list-inline-item"><a href="#0"><i class="icon ion-logo-github"></i></a></li>

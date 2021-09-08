@@ -16,7 +16,7 @@ def home(request):
 
 
     # About information
-    about = About.objects.all()
+    about = About.objects.first()
 
     return render(request, "core/base.html", 
                   {
