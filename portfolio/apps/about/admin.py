@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import About
 from .models import SocialNetwork
+from .models import Services
 
 
 class AboutAdmin(admin.ModelAdmin):
@@ -9,6 +10,10 @@ class AboutAdmin(admin.ModelAdmin):
 class SocialNetworkAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
 
+class ServicesAdmin(admin.ModelAdmin):
+    readonly_fields = ('created', 'updated')
+
 admin.site.register(About, AboutAdmin)
 admin.site.register(SocialNetwork, SocialNetworkAdmin)
+admin.site.register(Services, ServicesAdmin)
 

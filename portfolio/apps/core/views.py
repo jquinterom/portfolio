@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 from ..portfolio_.models import Project
 from ..about.models import About
 from ..about.models import SocialNetwork
+from ..about.models import Services
 
 
 def home(request):
@@ -15,10 +16,10 @@ def home(request):
         if(tp.type_project not in types_project):
             types_project.append(tp.type_project)
 
-
     # About information
     about = About.objects.first()
     social_networks = SocialNetwork.objects.all()
+    services = Services.objects.all()
 
     return render(request, "core/base.html", 
                   {
@@ -26,4 +27,5 @@ def home(request):
                       'types_project': types_project,
                       'about' : about,
                       'social_networks': social_networks,
+                      'services': services,
                   })
