@@ -37,3 +37,17 @@ class Experience(models.Model):
         return str(self.position)
 
 
+# Modelo de habilidades
+class Skill(models.Model):
+    name = models.CharField(max_length=50, verbose_name="Nombre")
+    percentage = models.SmallIntegerField(verbose_name="Porcentaje")
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creación')
+    updated = models.DateTimeField(auto_now=True, verbose_name='Fecha de actualización')
+
+    class Meta: 
+        verbose_name = "Habilidad"
+        verbose_name_plural = "Habilidades"
+        ordering = ['-percentage']
+
+    def __str__(self):
+        return str(self.name)

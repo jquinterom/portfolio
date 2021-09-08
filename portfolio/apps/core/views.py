@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from ..portfolio_.models import Project
 from ..about.models import About, SocialNetwork, Services
-from ..resume.models import Education, Experience
+from ..resume.models import Education, Experience, Skill
 
 
 def home(request):
@@ -23,6 +23,7 @@ def home(request):
     # Resume
     education = Education.objects.all()
     experience = Experience.objects.all()
+    skills = Skill.objects.all()
 
     return render(request, "core/base.html", 
                   {
@@ -33,4 +34,5 @@ def home(request):
                       'services': services,
                       'education': education,
                       'experience': experience,
+                      'skills': skills,
                   })
