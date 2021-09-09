@@ -5,6 +5,9 @@ from ..resume.models import Education, Experience, Skill
 from ..blog.models import Blog
 from ..contact.forms import ContactForm
 from django.urls import reverse
+from django.core.mail import EmailMessage
+from django.http import HttpResponse
+import json
 
 
 def home(request):
@@ -47,14 +50,26 @@ def home(request):
     if request.method == 'POST':
         contact_form = ContactForm(data=request.POST)
 
-        if(contact_form.is_valid()):
+        if contact_form.is_valid():
             name = request.POST.get('name', '')
             email = request.POST.get('email', '')
-            subject = request.POST.get('subject', '')
             content = request.POST.get('content', '')
-            # Suponiendo que todo va OK, redireccionamos
-            return redirect(reverse('contact')+'?ok')
+            # Enviamos el correo y redireccionamos 
+            email_to_send = EmailMessage(
+                'Portafolio: Nuevo mensaje de contacto',
+                'De {} <{}>\n\nEscribió:\n\n{}'.format(name, email, content),
+                'no-reply@inbox.mailtrap.io',
+                ['jfmq7710@gmail.com'],
+                reply_to=[email]
+            )
 
+            try:
+                email_to_send.send()
+                # Todo funcionó redireccionamos OK
+                return HttpResponse(json.dumps({'success': True}), content_type='application/json')
+            except:
+                # Algo no funcionó
+                return HttpResponse(json.dumps({'success': False}), content_type='application/json')
 
 
     return render(request, "core/base.html", 

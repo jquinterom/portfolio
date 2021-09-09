@@ -14,12 +14,6 @@ class ContactForm(forms.Form):
             'placeholder' : 'Email',
         }
     ), min_length=2, max_length=50)
-    subject = forms.CharField(label='Asunto', required=True, widget=forms.TextInput(
-        attrs={
-            'class' : 'form-control',
-            'placeholder' : 'Subjet'
-        }
-    ))
     content = forms.CharField(label='Contenido', required=True, widget=forms.Textarea(
         attrs={
             'class' : 'form-control',
