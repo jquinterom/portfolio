@@ -1,8 +1,13 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, redirect
 from ..portfolio_.models import Project
 from ..about.models import About, SocialNetwork, Services
 from ..resume.models import Education, Experience, Skill
 from ..blog.models import Blog
+from ..contact.forms import ContactForm
+from django.urls import reverse
+from django.core.mail import EmailMessage
+from django.http import HttpResponse
+import json
 
 
 def home(request):
@@ -38,6 +43,35 @@ def home(request):
     # Blog
     blogs = Blog.objects.all()
 
+    # Contact
+    contact_form = ContactForm()
+
+    # Manipulando el envio de correo
+    if request.method == 'POST':
+        contact_form = ContactForm(data=request.POST)
+
+        if contact_form.is_valid():
+            name = request.POST.get('name', '')
+            email = request.POST.get('email', '')
+            content = request.POST.get('content', '')
+            # Enviamos el correo y redireccionamos 
+            email_to_send = EmailMessage(
+                'Portafolio: Nuevo mensaje de contacto',
+                'De {} <{}>\n\nEscribió:\n\n{}'.format(name, email, content),
+                'no-reply@inbox.mailtrap.io',
+                ['jfmq7710@gmail.com'],
+                reply_to=[email]
+            )
+
+            try:
+                email_to_send.send()
+                # Todo funcionó redireccionamos OK
+                return HttpResponse(json.dumps({'success': True}), content_type='application/json')
+            except:
+                # Algo no funcionó
+                return HttpResponse(json.dumps({'success': False}), content_type='application/json')
+
+
     return render(request, "core/base.html", 
                   {
                       'projects': projects, 
@@ -50,4 +84,5 @@ def home(request):
                       'skills1': skills1,
                       'skills2': skills2,
                       'blogs': blogs,
+                      'contact_form': contact_form,
                   })
