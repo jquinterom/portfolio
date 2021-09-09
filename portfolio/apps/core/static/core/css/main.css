@@ -1793,6 +1793,10 @@ hr {
   height: auto;
 }
 
+#id_content {
+    height: auto;
+}
+
 .contact-section .contact-form .form-submit #contact-submit {
   padding: 10px 26px;
 }

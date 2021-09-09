@@ -4,6 +4,7 @@ from ..about.models import About, SocialNetwork, Services
 from ..resume.models import Education, Experience, Skill
 from ..blog.models import Blog
 from ..contact.forms import ContactForm
+from django.urls import reverse
 
 
 def home(request):
@@ -51,8 +52,8 @@ def home(request):
             email = request.POST.get('email', '')
             subject = request.POST.get('subject', '')
             content = request.POST.get('content', '')
-
             # Suponiendo que todo va OK, redireccionamos
+            return redirect(reverse('contact')+'?ok')
 
 
 
