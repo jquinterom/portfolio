@@ -67,9 +67,9 @@ def home(request):
                 email_to_send.send()
                 # Todo funcionó redireccionamos OK
                 return HttpResponse(json.dumps({'success': True}), content_type='application/json')
-            except Exception as error:
+            except Exception as e:
                 # Algo no funcionó
-                return HttpResponse(json.dumps({'success': False, 'message': error}), content_type='application/json')
+                return HttpResponse(json.dumps({'success': False, 'message': str(e)}), content_type='application/json')
 
 
     return render(request, "core/base.html", 
