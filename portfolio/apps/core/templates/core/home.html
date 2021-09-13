@@ -20,7 +20,7 @@
         <div class="fixed-block block-right">
             <ul class="list-unstyled social-icons">
                 {% for sn in social_networks %}
-                    <li><a href="{{ sn.link }}" title="{{ sn.name }}"><i class="icon {{ sn.class_name }} "></i></a></li>
+                    <li><a href="{{ sn.link }}" title="{{ sn.name }}" target='_blank'><i class="icon {{ sn.class_name }} "></i></a></li>
                 {% endfor %}
             </ul>
         </div>
