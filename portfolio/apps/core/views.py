@@ -11,7 +11,7 @@ import json
 
 
 def home(request):
-    # proyectos
+    # Projects 
     projects = Project.objects.filter(active=1)
 
     #types projects
