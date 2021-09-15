@@ -18,3 +18,8 @@
 .img_logo{
     width: 50px;
 }
+
+.background_main_text{
+    background-color: rgba(255, 255, 255, 0.18);
+    border: 3px solid #f1f1f1;
+}

@@ -20,6 +20,7 @@ class Project (models.Model):
     image = models.ImageField(verbose_name='Imagen', upload_to='projects')
     type_project = models.ForeignKey(ProjectType, on_delete=models.CASCADE, default=1)
     active = models.BooleanField(default=True, verbose_name="Activo")
+    source_code = models.URLField(verbose_name='Codigo Fuente', default='', blank=True)
     created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creación')
     updated = models.DateTimeField(auto_now=True, verbose_name='Fecha de actualización')
 
