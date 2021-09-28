@@ -28,25 +28,26 @@
                                     <h4 class="content-title">Message Me</h4>
                                     <div class="row">
                                         <div class="col-12 col-md-6 form-group">
-                                            <!-- <input class="form-control" id="contact-name" type="text" name="name" placeholder="Name" required=""> -->
                                             {{ contact_form.name }}
                                         </div>
                                         {{ contact_form.name.errors }}
                                         <div class="col-12 col-md-6 form-group">
-                                            <!-- <input class="form-control" id="contact-email" type="email" name="email" placeholder="Email" required="">-->
                                             {{ contact_form.email }}
                                         </div>
                                         {{ contact_form.email.errors }}
                                         <div class="col-12 form-group">
-                                            <!-- <input class="form-control" id="contact-subject" type="text" name="subject" placeholder="Subject" required=""> -->
                                             {{ contact_form.subject }}
                                         </div>
                                         {{ contact_form.subject.errors }}
                                         <div class="col-12 form-group form-message">
                                             {{ contact_form.content }}
-                                        <!-- <textarea class="form-control" id="contact-message" name="message" placeholder="Message" rows="5" required=""></textarea> -->
                                         </div>
                                         {{ contact_form.content.errors }}
+
+                                        <div class="col-12 form-group form-message">
+                                            {{ contact_form.captcha }}
+                                        </div>
+
                                         <div class="col-12 form-submit"><button class="btn button-main button-scheme" id="contact-submit" type="submit">Send Message</button>
                                             <p class="contact-feedback"></p>
                                         </div>
