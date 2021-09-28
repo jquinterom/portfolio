@@ -62,7 +62,7 @@ def home(request):
                 'Portafolio: Nuevo mensaje de contacto',
                 'De {} <{}>\n\nEscribió:\n\n{}'.format(name, email, content),
                 'no-reply@inbox.mailtrap.io',
-                ['jfmq7710@gmail.com'],
+                ['jfqm7710@gmail.com'],
                 reply_to=[email]
             )
 
