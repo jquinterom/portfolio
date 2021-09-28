@@ -8,8 +8,6 @@ from django.urls import reverse
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
 import json
-from twilio.rest import Client
-from twilio.http.http_client import TwilioHttpClient
 import os
 from django.conf import settings
 
@@ -60,7 +58,6 @@ def home(request):
             email = request.POST.get('email', '')
             content = request.POST.get('content', '')
             # Enviamos el correo y redireccionamos 
-            """
             email_to_send = EmailMessage(
                 'Portafolio: Nuevo mensaje de contacto',
                 'De {} <{}>\n\nEscribió:\n\n{}'.format(name, email, content),
@@ -68,17 +65,9 @@ def home(request):
                 ['jfmq7710@gmail.com'],
                 reply_to=[email]
             )
-            """
-
-            proxy_client = TwilioHttpClient(proxy={'http': os.environ['http_proxy'], 'https': os.environ['https_proxy']})
-            account_sid = settings.ACCOUNT_ID_TWILIO
-            auth_token = settings.AUTH_TOKEN_TWILIO
-
-            client = Client(account_sid, auth_token, http_client=proxy_client)
 
             try:
-                # email_to_send.send()
-                message = client.messages.create(to="jfmq7710@gmail", from_='no-reply@inbox.mailtrap.com', body='De {} <{}>\n\nEscribió:\n\n{}'.format(name, email, content))
+                email_to_send.send()
                 # Todo funcionó redireccionamos OK
                 return HttpResponse(json.dumps({'success': True}), content_type='application/json')
             except Exception as e:
