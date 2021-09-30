@@ -24,13 +24,4 @@ class ContactForm(forms.Form):
             'rows': '5',
         }
     ), min_length=10, max_length=1000)
-
-    captcha = ReCaptchaField(
-        widget=ReCaptchaV2Checkbox(
-            attrs={
-                'data-theme': 'dark',
-            }
-        )
-    )
-
-
+ 
