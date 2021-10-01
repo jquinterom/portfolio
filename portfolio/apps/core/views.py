@@ -9,6 +9,7 @@ from django.core.mail import EmailMessage
 from django.http import HttpResponse
 import json
 import os
+import requests
 from django.conf import settings
 
 
@@ -32,7 +33,7 @@ def home(request):
     # Resume
     education = Education.objects.all()
     experience = Experience.objects.all()
-    
+
     skills = Skill.objects.all()
     len_skills = len(skills)
     half = round(len_skills//2)
@@ -48,9 +49,29 @@ def home(request):
 
     # Contact
     contact_form = ContactForm()
+    secret_key = ''  # Llave para recaptcha
 
     # Manipulando el envio de correo
     if request.method == 'POST':
+        data = request.POST
+        secret_key = settings.RECAPTCHA_PRIVATE_KEY
+
+        # captcha verification
+        data = {
+            'response': data.get('g-recaptcha-response'),
+            'secret': secret_key
+        }
+        resp = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
+        result_json = resp.json()
+        print(result_json)
+
+        if not result_json.get('success'):
+            # return render(request, 'contact_sent.html', {'is_robot': True})
+            return HttpResponse(json.dumps({'success': False, 'message': 'is_robot'}), content_type='application/json')
+        # end captcha verification
+
+        
+        # Ha pasado recaptcha
         contact_form = ContactForm(data=request.POST)
 
         if contact_form.is_valid():
@@ -74,8 +95,6 @@ def home(request):
                 # Algo no funcionó
                 return HttpResponse(json.dumps({'success': False, 'message': str(e)}), content_type='application/json')
 
-
-
     return render(request, "core/base.html", 
                   {
                       'projects': projects, 
@@ -89,4 +108,5 @@ def home(request):
                       'skills2': skills2,
                       'blogs': blogs,
                       'contact_form': contact_form,
+                      'site_key': settings.RECAPTCHA_PUBLIC_KEY,
                   })

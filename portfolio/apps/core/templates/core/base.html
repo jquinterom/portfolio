@@ -30,6 +30,11 @@
         <link id="color-scheme" rel="stylesheet" href="{% static 'core/css/colors/main-darkgreen.css' %}">
         <!-- Custom CSS (Add your custom CSS styles to this file)-->
         <link rel="stylesheet" href="{% static 'core/css/custom.css' %}">
+
+        <!-- recaptcha -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                                                                  crossorigin="anonymous"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render={{ site_key }}"></script>
     </head>
 
     <body class="theme-dark">
@@ -42,7 +47,7 @@
         <div id="overlay-effect"></div>
         <!-- Navbar-->
         <nav class="navbar-expand-md navbar fixed-top" id="navbar">
-                <a class="navbar-brand img_logo" data-scroll="" href="#home-area">
+            <a class="navbar-brand img_logo" data-scroll="" href="#home-area">
                 <!-- Navbar Logo-->
                 <img class="img-fluid" src="{% static 'core/img/linux-client-512.png' %}" alt="Logo"></a>
             <span class="navbar-menu ml-auto" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" role="button"><span class="btn-line"></span></span>
