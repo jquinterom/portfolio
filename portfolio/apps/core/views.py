@@ -63,8 +63,6 @@ def home(request):
         }
         resp = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
         result_json = resp.json()
-
-        print(data)
         print(result_json)
 
         if not result_json.get('success'):

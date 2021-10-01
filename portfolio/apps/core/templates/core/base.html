@@ -35,20 +35,6 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
                                                                   crossorigin="anonymous"></script>
         <script src="https://www.google.com/recaptcha/api.js?render={{ site_key }}"></script>
-
-        <script>
-            grecaptcha.ready(function() {
-                $('#contact-form').submit(function(e){
-                    var form = this;
-                    e.preventDefault()
-                    grecaptcha.execute('{{ site_key }}', {action: 'contactform'}).then(function(token) {
-                        $('#recaptcha').val(token)
-                        form.submit()
-                    });
-                })
-            });
-        </script>
-
     </head>
 
     <body class="theme-dark">

@@ -25,6 +25,7 @@
                             <div class="col-12 col-lg-7">
                                 <form class="contact-form" id="contact-form" action="" method="POST">
                                     <input type="hidden" name="g-recaptcha-response" id='recaptcha'>
+                                    <input type="hidden" name="g-recaptcha-site-key" id='site_key' value='{{ site_key }}'>
                                     {% csrf_token %}
                                     <h4 class="content-title">Message Me</h4>
                                     <div class="row">
