@@ -26,7 +26,7 @@ Portfolio-Django uses a number of open source apps and porjects to work properly
 - [Django] - Develop your apps!
 - [SQLITE] - awesome database manager.
 - [Python] - One of the best programming languages.
-- [PIP] - For managing the pakages
+- [Pip] - For managing the pakages
 
 
 
@@ -36,4 +36,4 @@ Portfolio-Django uses a number of open source apps and porjects to work properly
    [Django]: <https://www.djangoproject.com/>
    [SQLITE]: <https://www.sqlite.org/index.html>
    [Python]: <https://www.python.org/>
-   [PIP]: <https://pypi.org/project/pip/>
+   [Pip]: <https://pypi.org/project/pip/>
