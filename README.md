@@ -8,3 +8,10 @@ The best option for portfolio creation and management. It contains the following
 - Resume 
 - Blog
 - Contact 
+## Features
+
+- Register your information in about page
+- Add yours social networks
+- Create un mini blog
+- Contact form functional with recaptcha V3
+- Add your CV
