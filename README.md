@@ -29,7 +29,7 @@ Portfolio-Django uses a number of open source apps and porjects to work properly
 - [Django] - Develop your apps!
 - [SQLITE] - awesome database manager.
 - [Python] - One of the best programming languages.
-- [Pip] - For managing the pakages
+- [Pip] - For managing the pakages.
 
 
 ## Requeriments 
@@ -52,7 +52,7 @@ you can learn how to install and activate it at this [link](https://docs.python.
 Activate the virtual environment:
 
 ```sh
-source ./path-venv/activate
+source ./path-venv/bin/activate
 ```
 
 Install dependencies.
@@ -67,10 +67,9 @@ pip install -r requeriments.txt
 Very well!
 Now to start the project, you need to create migrations and start the server. 
 
-Remember change **path-project** for your local path.
-
 Open your favorite Terminal and run these commands.
 
+Remember change **path-project** for your local path.
 
 ```sh
 cd /path-project/portfolio/
@@ -104,6 +103,3 @@ You can change '9000' as you prefer.
    [https://github.com/google/recaptcha/blob/master/README.md]: <https://github.com/google/recaptcha/blob/master/README.md>
    [https://github.com/python-pillow/Pillow/blob/master/README.md]: <https://github.com/python-pillow/Pillow/blob/master/README.md>
    [https://github.com/django/django#django]: <https://github.com/django/django#django>
-   
-   
-   
