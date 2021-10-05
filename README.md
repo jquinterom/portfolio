@@ -67,7 +67,10 @@ pip install -r requeriments.txt
 Very well!
 Now to start the project, you need to create migrations and start the server. 
 
+Remember change **path-project** for your local path.
+
 Open your favorite Terminal and run these commands.
+
 
 ```sh
 cd /path-project/portfolio/
