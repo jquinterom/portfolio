@@ -27,10 +27,12 @@ class SocialNetwork(models.Model):
     FACEBOOK = 'ion-logo-facebook'
     GITHUB = 'ion-logo-github'
     LINKEDIN = 'ion-logo-linkedin'
+    TWITTER = 'ion-logo-twitter'
     SOCIAL_NETWORKS = [
         (FACEBOOK, 'Facebook'),
         (GITHUB, 'Github'),
         (LINKEDIN, 'Linkedin'),
+        (TWITTER, 'Twitter'),
     ]
     name = models.CharField(max_length=50, verbose_name='Nombre Aplicación')
     class_name = models.CharField(max_length=50, choices=SOCIAL_NETWORKS, default=FACEBOOK, verbose_name='Clase de aplicación')
