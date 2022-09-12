@@ -40,6 +40,14 @@
                                         <div class="portfolio-wrapper"><img class="img-fluid rounded mx-auto d-block img_portfolio text-center" alt="Item" src="{{ item.image.url }}">
                                             <div class="item-content">
                                                 <h6 class="content-title">{{ item.title }}</h6><span class="content-more">{{ item.description }}</span>
+                                                {% if item.url_deployed != '' %}
+                                                    <div class="fixed-block">
+                                                        <a href="{{ item.url_deployed }}" title="{{ item.title }}" target='_blank' class='content-title'>
+                                                            <h4><span class="content-more">View Online</span><i class="icon ion-md-link"></h4>
+                                                        </a>
+                                                    </div>
+                                                {% endif %}
+                                                
                                                 {% if item.source_code != '' %}
                                                     <!-- Social media icons-->
                                                     <div class="fixed-block">
