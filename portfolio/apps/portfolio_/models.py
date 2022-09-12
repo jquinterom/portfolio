@@ -21,6 +21,7 @@ class Project (models.Model):
     type_project = models.ForeignKey(ProjectType, on_delete=models.CASCADE, default=1)
     active = models.BooleanField(default=True, verbose_name="Activo")
     source_code = models.URLField(verbose_name='Codigo Fuente', default='', blank=True)
+    url_deployed = models.URLField(verbose_name='Enlace Produccion', default='', blank=True)
     created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creación')
     updated = models.DateTimeField(auto_now=True, verbose_name='Fecha de actualización')
 
