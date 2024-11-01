@@ -5,6 +5,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Tech stack colors */
+  --nextjs-primary: #000000;
+  --android-primary: #4fb053;
+  --laravel-primary: #F9322C;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -11,10 +11,23 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+
+        /* Tech stack colors */
+        android: {
+          primary: "var(--android-primary)",
+        },
+        nextjs: {
+          primary: "var(--nextjs-primary)",
+        },
+        laravel: {
+          primary: "var(--laravel-primary)",
+        },
       },
     },
   },
   darkMode: 'class',
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 };
 export default config;
