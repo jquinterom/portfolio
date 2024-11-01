@@ -3,24 +3,25 @@
 import { useEffect, useState } from "react";
 import useThemeProvider from "./hooks/useThemeProvider";
 import { motion } from 'framer-motion'
-import { ChevronDown, Linkedin, Youtube, GitHub, Server, Database, Smartphone, Mail, Moon, Sun } from "react-feather"
-
-
-const TechIcon = ({ name, color, children }: { name: string, color: string, children: React.ReactNode }) => (
-  <div className="flex flex-col items-center">
-    <div className={`w-10 h-10 rounded-full ${color} flex items-center justify-center text-white mb-1`}>
-      {children}
-    </div>
-    <span className="text-xs text-center">{name}</span>
-  </div>
-)
-
+import {
+  ChevronDown,
+  Server,
+  Database,
+  Smartphone,
+  Moon,
+  Sun
+} from "react-feather"
+import { techStack } from "@/utils/constants";
+import { TechIcon } from "./components/TechIcon";
+import Footer from "./components/Footer";
+import ProjectsSection from "./components/ProjectsSection";
 
 
 export default function Home() {
   const { theme, toggleTheme } = useThemeProvider()
 
   const [activeSection, setActiveSection] = useState('home')
+  const developText = "< Front-end & Android Developer />"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,38 +48,6 @@ export default function Home() {
     }
   }
 
-  const handleClickOnMail = () => {
-    const mailtoLink = `mailto:jfqm7710@gmail.com`;
-    window.location.href = mailtoLink;
-  };
-
-  const techStack = {
-    frontend: [
-      { name: 'React', icon: "svg", color: 'bg-blue-500' },
-      { name: 'Next.js', icon: 'Nj', color: 'bg-black' },
-      { name: 'TypeScript', icon: 'Ts', color: 'bg-blue-600' },
-      { name: 'JavaScript', icon: 'Js', color: 'bg-yellow-400' },
-      { name: 'Tailwind CSS', icon: 'Tw', color: 'bg-cyan-400' },
-      { name: 'GraphQL', icon: 'Gq', color: 'bg-pink-600' },
-      { name: 'Storybook', icon: 'Sb', color: 'bg-purple-600' },
-      { name: 'Jest', icon: 'Je', color: 'bg-red-600' },
-      { name: 'React Testing Library', icon: 'Rtl', color: 'bg-red-400' },
-    ],
-    android: [
-      { name: 'Kotlin', icon: 'Kt', color: 'bg-orange-500' },
-      { name: 'Jetpack Compose', icon: 'Jc', color: 'bg-green-500' },
-      { name: 'Retrofit', icon: 'Rt', color: 'bg-blue-400' },
-      { name: 'Hilt', icon: 'Hi', color: 'bg-teal-500' },
-      { name: 'Unit Testing', icon: 'Ut', color: 'bg-yellow-600' },
-      { name: 'Mockito', icon: 'Mo', color: 'bg-green-600' },
-      { name: 'SQLite', icon: 'Sq', color: 'bg-blue-300' },
-    ],
-    backend: [
-      { name: 'Laravel', icon: 'Lv', color: 'bg-red-500' },
-      { name: 'PHP', icon: 'Php', color: 'bg-purple-400' },
-      { name: 'Eloquent', icon: 'El', color: 'bg-red-400' },
-    ],
-  }
 
   return (
     <div className="min-h-screen dark:bg-gray-900 dark:text-white bg-slate-100 text-black">
@@ -122,7 +91,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl dark:text-gray-300 mb-8"
             >
-              Front-end & Android Developer
+              {developText}
             </motion.p>
             <motion.p
               initial={{ opacity: 0 }}
@@ -169,32 +138,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="py-20">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { title: 'Project 1', description: 'A React.js web application', image: '/placeholder.svg?height=200&width=300' },
-                { title: 'Project 2', description: 'An Android app built with Kotlin', image: '/placeholder.svg?height=200&width=300' },
-                { title: 'Project 3', description: 'A responsive website', image: '/placeholder.svg?height=200&width=300' },
-              ].map((project, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-gray-400">{project.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ProjectsSection />
 
         <section id="tech-stack" className="py-20 bg-slate-200 dark:bg-gray-800">
           <div className="container mx-auto px-6">
@@ -236,25 +180,8 @@ export default function Home() {
 
       </main>
 
-      <footer id="footer" className="bg-slate-100 dark:bg-gray-900 py-8">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 mb-4 md:mb-0">&copy; 2024 Your Name. All rights reserved.</p>
-          <div className="flex space-x-6">
-            <a href="https://github.com/jquinterom" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-              <GitHub size={24} />
-            </a>
-            <a href="https://www.linkedin.com/in/jquinterom" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-              <Linkedin size={24} />
-            </a>
-            <a href="https://www.youtube.com/@commondev" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-              <Youtube size={24} />
-            </a>
-            <span onClick={handleClickOnMail} className="text-gray-400 hover:text-white transition-colors hover:cursor-pointer">
-              <Mail size={24} />
-            </span>
-          </div>
-        </div>
-      </footer>
+      <Footer />
+
     </div>
   );
 }
