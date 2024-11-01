@@ -27,14 +27,14 @@ const ProjectCard = ({ index, title, description, image, tech }: CardProps) => {
             </div>
             <div className="px-6 py-2">
                 <h3 className="text-xl font-semibold mb-2">{title}</h3>
-                <div className={`text-sm text-gray-600 ${isExpanded ? '' : 'line-clamp-1'}`}>
+                <div className={`text-sm text-gray-600 dark:text-gray-300 ${isExpanded ? '' : 'line-clamp-1'}`}>
                     {description}
                 </div>
                 <button
                     onClick={() => setIsExpanded(!isExpanded)}
                     className="text-blue-500 text-sm mt-2"
                 >
-                    {isExpanded ? "Show less" : "Show more"}
+                    {isExpanded ? "Mostrar menos" : "Mostrar más"}
                 </button>
             </div>
 

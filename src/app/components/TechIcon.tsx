@@ -1,17 +1,19 @@
+import { Icon } from "react-feather";
+
 interface TechIconProps {
     name: string;
+    icon: Icon;
     color: string;
-    children: React.ReactNode;
 }
 
-export const TechIcon = ({ name, color, children }: TechIconProps) => {
-
+export const TechIcon = ({ name, icon: Icon, color }: TechIconProps) => {
     return (
         <div className="flex flex-col items-center">
-            <div className={`w-10 h-10 rounded-full ${color}  flex items-center justify-center text-white mb-1`}>
-                {children}
+            <div className={`rounded-full bg-slate-300 dark:bg-gray-900 p-3 flex items-center justify-center ${color}`}>
+                <Icon size={24} />
             </div>
+
             <span className="text-xs text-center">{name}</span>
-        </div>
+        </div >
     )
 }
