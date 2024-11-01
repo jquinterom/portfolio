@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from 'framer-motion'
+import Image from "next/image";
 
 interface CardProps {
     index: number,
@@ -19,7 +20,13 @@ const ProjectCard = ({ index, title, description, image, tech }: CardProps) => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="bg-slate-300 dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
         >
-            <img src={image} alt={title} className="w-full h-48 object-cover" />
+            <Image
+                src={image}
+                alt={title}
+                className="w-full h-48 object-cover"
+                height={200}
+                width={300}
+            />
             <div className="w-full flex items-center justify-end p-2">
                 <div className="rounded-full bg-slate-400 dark:bg-gray-600 text-white p-1 shadow-md">
                     {tech}

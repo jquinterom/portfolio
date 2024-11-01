@@ -1,7 +1,7 @@
 import { Database, Icon, Server, Smartphone } from "react-feather"
 import { TechIcon } from "./TechIcon"
-import { FaAndroid, FaReact } from "react-icons/fa"
-import { RiJavaFill, RiJavascriptFill, RiNextjsFill, RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
+import { FaAndroid } from "react-icons/fa"
+import { RiJavaFill, RiJavascriptFill, RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { SiGraphql, SiJest, SiJetpackcompose, SiKotlin, SiLaravel, SiMysql, SiPhp, SiReact, SiSqlite, SiStorybook, SiTestinglibrary, SiTypescript } from "react-icons/si";
 import { BsAndroid, BsAndroid2, BsDatabase } from "react-icons/bs";
 import { ImAndroid } from "react-icons/im";

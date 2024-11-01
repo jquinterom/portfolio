@@ -12,7 +12,7 @@ const techProjects = {
 export const projects: ProjectType[] = [
   {
     title: 'AppSurgas',
-    image: 'images/project1.jpg?height=200&width=300',
+    image: '/images/project1.jpg?height=200&width=300',
     tech: techProjects.Android,
     description: 'AppSurgas es una aplicación para Android construida para toma de lecturas de contadores de gas, la aplicación contaba con módulos de verificación de lectura, notificaciones de lectura incorrecta entre muchas funciones más.'
   },
