@@ -1,0 +1,32 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "tech-stack": "Tech Stack"
+  },
+  "HomeSection": {
+    "title": "Front-end & Android Developer",
+    "about": "I am a systems engineer and a front-end developer focused on frontend/android/backend technologies with experience in React Js, Jetpack compose and Laravel. I love creating effective applications, optimizing processes, and offering solutions that positively impact customers. Additionally, I am an enthusiastic learner and analytical, generally, I am updating my knowledge about the areas that call my attention.",
+    "get-in-touch": "Contact me"
+  },
+  "ProjectsSection": {
+    "title": "Projects",
+    "cards": {
+      "show-more": "Show more",
+      "show-less": "Show less",
+      "first-project": {
+        "title": "AppSurgas",
+        "description": "AppSurgas is an Android application built to take readings of gas counters, the application had modules of reading verification, incorrect reading notifications among many more functions."
+      },
+      "second-project": {
+        "title": "Naranja ERP - POS",
+        "description": "Application to keep inventory records, clients, users, reports and more."
+      },
+      "third-project": {
+        "title": "Private - Artificial intelligence",
+        "description": "Web application for handling a large amount of processed multimedia by artificial intelligence. In this application, the atomic design structure type was applied to keep reusable components."
+      }
+    }
+  }
+}

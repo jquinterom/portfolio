@@ -1,13 +1,13 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import Footer from "./components/Footer";
-import ProjectsSection from "./components/ProjectSection/ProjectsSection";
-import HomeSection from "./components/HomeSection";
-import SkillsSection from "./components/SkillsSection";
-import TechStackSection from "./components/TechStackSection";
-import Nav from "./components/Nav";
-import ToggleTheme from "./components/ToggleTheme";
+import Footer from "../components/Footer";
+import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
+import HomeSection from "../components/HomeSection";
+import SkillsSection from "../components/SkillsSection";
+import TechStackSection from "../components/TechStackSection";
+import Nav from "../components/Nav";
+import ToggleTheme from "../components/ToggleTheme";
 
 
 export default function Home() {
@@ -41,6 +41,7 @@ export default function Home() {
       </header>
 
       <main>
+
         <HomeSection />
 
         <ProjectsSection />
