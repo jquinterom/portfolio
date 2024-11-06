@@ -29,7 +29,6 @@ function ProjectProps(index: number) {
   }
 }
 
-
 const ProjectsSection = () => {
   const t = useTranslations('ProjectsSection');
   return (

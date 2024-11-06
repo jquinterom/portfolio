@@ -29,6 +29,7 @@ const ProjectCard = ({ index, title, description, image, tech }: CardProps) => {
         className="w-full h-48 object-cover"
         height={200}
         width={300}
+        priority
       />
       <div className="w-full flex items-center justify-end p-2">
         <div className="rounded-full bg-slate-400 dark:bg-gray-600 text-white p-1 shadow-md">

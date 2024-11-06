@@ -28,5 +28,11 @@
         "description": "Web application for handling a large amount of processed multimedia by artificial intelligence. In this application, the atomic design structure type was applied to keep reusable components."
       }
     }
+  },
+  "SkillsSection": {
+    "title": "Skills"
+  },
+  "Footer": {
+    "rights": "All rights reserved."
   }
 }

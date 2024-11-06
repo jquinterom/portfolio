@@ -10,17 +10,19 @@ const techProjects = {
 
 export const projects: ProjectType[] = [
   {
-    image: '/images/project1.jpg?height=200&width=300',
+    image: '/images/project1.jpg',
     tech: techProjects.Android,
   },
   {
-    image: '/images/project2.jpg?height=200&width=300',
+    image: '/images/project2.jpg',
     tech: techProjects.Laravel,
   },
   {
-    image: '/images/project3.jpg?height=200&width=300',
+    image: '/images/project3.jpg',
     tech: techProjects.NextJs,
   },
 ]
 
 export const sections = ['home', 'projects', 'skills', 'tech-stack']
+
+export const skills = ['React.js', 'Android Development', 'Laravel', 'Mysql',]  

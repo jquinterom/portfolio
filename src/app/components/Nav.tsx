@@ -1,22 +1,35 @@
-import { sections } from "@/utils/constants"
-import { scrollToSection } from "@/utils/scrollToSection"
+import { useState } from "react";
+import { sections } from "@/utils/constants";
+import { scrollToSection } from "@/utils/scrollToSection";
 import { useTranslations } from "next-intl";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 interface NavProps {
-  activeSection: string
+  activeSection: string;
 }
 
 const Nav = ({ activeSection }: NavProps) => {
-  const t = useTranslations('Navbar');
+  const t = useTranslations("Navbar");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
 
   return (
-    <nav className="container mx-auto px-6 py-4">
-      <ul className="flex justify-center space-x-8">
+    <nav className="container mx-auto px-24 py-4">
+      <div className="flex justify-between items-center md:hidden">
+        <button onClick={toggleMobileMenu} aria-label="Toggle Menu">
+          {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+      </div>
+
+      <ul className="h-9 hidden md:flex justify-center space-x-8 bg-opacity-90 backdrop-blur-sm">
         {sections.map((item) => (
           <li key={item}>
             <button
               onClick={() => scrollToSection(item)}
-              className={`text-lg font-semibold hover:text-blue-400 transition-colors ${activeSection === item ? 'text-blue-400' : ''
+              className={`text-lg font-semibold hover:text-blue-400 transition-colors ${activeSection === item ? "text-blue-400" : ""
                 }`}
             >
               {t(item)}
@@ -24,8 +37,27 @@ const Nav = ({ activeSection }: NavProps) => {
           </li>
         ))}
       </ul>
-    </nav>
-  )
-}
 
-export default Nav
+      {isMobileMenuOpen && (
+        <ul className="flex flex-col items-center space-y-4 mt-4 md:hidden bg-opacity-90 backdrop-blur-sm">
+          {sections.map((item) => (
+            <li key={item}>
+              <button
+                onClick={() => {
+                  scrollToSection(item);
+                  setIsMobileMenuOpen(false); // Close menu after selection
+                }}
+                className={`text-lg font-semibold hover:text-blue-400 transition-colors ${activeSection === item ? "text-blue-400" : ""
+                  }`}
+              >
+                {t(item)}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  );
+};
+
+export default Nav;
