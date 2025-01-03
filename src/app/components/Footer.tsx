@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer id="footer" className="bg-slate-100 dark:bg-gray-900 py-8 text-black dark:text-gray-400">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-        <p className="mb-4 md:mb-0">&copy; 2024 Jhon Quintero. {t('rights')}</p>
+        <p className="mb-4 md:mb-0">&copy; 2025 Jhon Quintero. {t('rights')}</p>
         <div className="flex space-x-6">
           <a href="https://github.com/jquinterom" target="_blank" rel="noopener noreferrer" className=" hover:dark:text-white transition-colors">
             <GitHub size={24} />
