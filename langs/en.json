@@ -29,6 +29,15 @@
       }
     }
   },
+  "MiniProjectsSection": {
+    "title": "Mini Projects",
+    "cards": {
+      "first-project": {
+        "title": "Todo ap",
+        "description": "Web application to manage tasks and task lists."
+      }
+    }
+  },
   "SkillsSection": {
     "title": "Skills"
   },

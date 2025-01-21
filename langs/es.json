@@ -29,6 +29,15 @@
       }
     }
   },
+  "MiniProjectsSection": {
+    "title": "Mini Proyectos",
+    "cards": {
+      "first-project": {
+        "title": "Todo app",
+        "description": "Aplicación web para gestionar tareas y listas de tareas."
+      }
+    }
+  },
   "SkillsSection": {
     "title": "Habilidades"
   },
