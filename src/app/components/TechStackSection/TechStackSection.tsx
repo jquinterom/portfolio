@@ -18,6 +18,7 @@ import {
   SiReact,
   SiSqlite,
   SiStorybook,
+  SiSupabase,
   SiTestinglibrary,
   SiTypescript,
 } from "react-icons/si";
@@ -52,6 +53,11 @@ const techStack: TechStackSectionProps = {
       name: "React Testing Library",
       icon: SiTestinglibrary,
       color: "text-red-400",
+    },
+    {
+      name: "Supabase",
+      icon: SiSupabase,
+      color: "text-green-500",
     },
   ],
   android: [
