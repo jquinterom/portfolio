@@ -17,7 +17,7 @@ const Nav = ({ activeSection }: NavProps) => {
   };
 
   return (
-    <nav className="container mx-auto py-4">
+    <nav className="container mx-auto py-4 pe-24">
       <div className="flex justify-between items-center md:hidden ps-2">
         <button onClick={toggleMobileMenu} aria-label="Toggle Menu">
           {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -29,8 +29,9 @@ const Nav = ({ activeSection }: NavProps) => {
           <li key={item}>
             <button
               onClick={() => scrollToSection(item)}
-              className={`text-lg font-semibold hover:text-blue-400 transition-colors ${activeSection === item ? "text-blue-400" : ""
-                }`}
+              className={`text-lg font-semibold hover:text-blue-400 transition-colors ${
+                activeSection === item ? "text-blue-400" : ""
+              }`}
             >
               {t(item)}
             </button>
@@ -47,8 +48,9 @@ const Nav = ({ activeSection }: NavProps) => {
                   scrollToSection(item);
                   setIsMobileMenuOpen(false); // Close menu after selection
                 }}
-                className={`text-lg font-semibold hover:text-blue-400 transition-colors ${activeSection === item ? "text-blue-400" : ""
-                  }`}
+                className={`text-lg font-semibold hover:text-blue-400 transition-colors ${
+                  activeSection === item ? "text-blue-400" : ""
+                }`}
               >
                 {t(item)}
               </button>
