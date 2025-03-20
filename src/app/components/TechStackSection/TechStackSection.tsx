@@ -22,6 +22,7 @@ import {
   SiTestinglibrary,
   SiTypescript,
   SiReactquery,
+  SiFigma,
 } from "react-icons/si";
 import { BsAndroid, BsAndroid2, BsDatabase } from "react-icons/bs";
 import { ImAndroid } from "react-icons/im";
@@ -64,6 +65,11 @@ const techStack: TechStackSectionProps = {
       name: "TanStack Query",
       icon: SiReactquery,
       color: "text-green-500",
+    },
+    {
+      name: "Figma",
+      icon: SiFigma,
+      color: "text-blue-400",
     },
   ],
   android: [
