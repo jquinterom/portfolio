@@ -23,7 +23,9 @@ import {
   SiTypescript,
   SiReactquery,
   SiFigma,
+  SiStripe,
 } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 import { BsAndroid, BsAndroid2, BsDatabase } from "react-icons/bs";
 import { ImAndroid } from "react-icons/im";
 import { LiaLaravel } from "react-icons/lia";
@@ -57,11 +59,6 @@ const techStack: TechStackSectionProps = {
       color: "text-red-400",
     },
     {
-      name: "Supabase",
-      icon: SiSupabase,
-      color: "text-green-500",
-    },
-    {
       name: "TanStack Query",
       icon: SiReactquery,
       color: "text-green-500",
@@ -74,6 +71,7 @@ const techStack: TechStackSectionProps = {
   ],
   android: [
     { name: "Kotlin", icon: SiKotlin, color: "text-orange-500" },
+    { name: "React Native", icon: TbBrandReactNative, color: "text-blue-500" },
     { name: "Java", icon: RiJavaFill, color: "text-orange-500" },
     {
       name: "Jetpack Compose",
@@ -93,6 +91,8 @@ const techStack: TechStackSectionProps = {
     { name: "Eloquent", icon: LiaLaravel, color: "text-red-400" },
     { name: "Mysql", icon: SiMysql, color: "text-blue-500" },
     { name: "Rest Api", icon: MdHttp, color: "text-yellow-400" },
+    { name: "Supabase", icon: SiSupabase, color: "text-green-500" },
+    { name: "Stripe", icon: SiStripe, color: "text-purple-500" },
   ],
 };
 

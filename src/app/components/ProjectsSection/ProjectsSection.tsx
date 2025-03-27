@@ -1,7 +1,6 @@
 import { projects } from "@/utils/constants";
 import ProjectCard from "./ProjectCard";
 import { useTranslations } from "next-intl";
-import MiniProjectsSection from "./MiniProjectsSection";
 
 function ProjectProps(index: number) {
   const t = useTranslations("ProjectsSection");
@@ -21,6 +20,16 @@ function ProjectProps(index: number) {
       return {
         title: t("cards.third-project.title"),
         description: t("cards.third-project.description"),
+      };
+    case 3:
+      return {
+        title: t("cards.fourth-project.title"),
+        description: t("cards.fourth-project.description"),
+      };
+    case 4:
+      return {
+        title: t("cards.fifth-project.title"),
+        description: t("cards.fifth-project.description"),
       };
     default:
       return {
@@ -46,13 +55,11 @@ const ProjectsSection = () => {
                 index={index}
                 title={projectProps.title}
                 description={projectProps.description}
-                image={project.image}
-                tech={project.tech}
+                project={project}
               />
             );
           })}
         </div>
-        <MiniProjectsSection />
       </div>
     </section>
   );

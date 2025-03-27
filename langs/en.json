@@ -26,6 +26,14 @@
       "third-project": {
         "title": "Private - Artificial intelligence",
         "description": "Web application for handling a large amount of processed multimedia by artificial intelligence. In this application, the atomic design structure type was applied to keep reusable components."
+      }, 
+      "fourth-project": {
+        "title": "Todo app",
+        "description": "Web application to manage task lists."
+      }, 
+      "fifth-project": {
+        "title": "Gadget shop",
+        "description": "Web application to manage orders and products in the store."
       }
     }
   },

@@ -1,9 +1,6 @@
 export interface ProjectType {
-  image: string
-  tech: React.ReactNode
-}
-
-export interface MiniProjectType {
-  title: string
-  github: string
+  image: string;
+  tech: React.ReactNode;
+  github?: string;
+  urlProduction?: string;
 }
