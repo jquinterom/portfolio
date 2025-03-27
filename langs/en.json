@@ -34,6 +34,10 @@
       "fifth-project": {
         "title": "Gadget shop",
         "description": "Web application to manage orders and products in the store."
+      }, 
+      "sixth-project": {
+        "title": "Gadget app",
+        "description": "Mobile application to manage orders and products in the store."
       }
     }
   },

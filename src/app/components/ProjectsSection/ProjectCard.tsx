@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -28,8 +28,9 @@ const ImageCard = ({ image, title }: { image: string; title: string }) => {
 };
 
 const ProjectCard = ({ index, title, description, project }: CardProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
   const t = useTranslations("ProjectsSection.cards");
+
+  const textRef = useRef<HTMLDivElement>(null);
 
   return (
     <motion.div
@@ -46,8 +47,8 @@ const ProjectCard = ({ index, title, description, project }: CardProps) => {
       ) : (
         <ImageCard image={project.image} title={title} />
       )}
-      <div className="absolute bottom-0 right-0 p-2 flex justify-between space-x-1">
-        <div className="rounded-full bg-slate-400 dark:bg-gray-600 text-white p-1 shadow-md">
+      <div className="absolute top-0 right-0 p-2 flex justify-between space-x-1">
+        <div className="rounded-full bg-blue-400 dark:bg-blue-600 text-white p-1 shadow-md">
           {project.tech}
         </div>
 
@@ -57,7 +58,7 @@ const ProjectCard = ({ index, title, description, project }: CardProps) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="rounded-full bg-slate-400 dark:bg-gray-600 text-white p-1 shadow-md "
+              className="rounded-full bg-blue-400 dark:bg-blue-600 text-white p-1 shadow-md "
             >
               <Link href={project.github} target="_blank">
                 <GitHub />
@@ -70,18 +71,11 @@ const ProjectCard = ({ index, title, description, project }: CardProps) => {
       <div className="px-6 py-2">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <div
-          className={`text-sm text-gray-600 dark:text-gray-300 ${
-            isExpanded ? "" : "line-clamp-1"
-          }`}
+          ref={textRef}
+          className={`text-sm text-gray-600 dark:text-gray-300 text-justify`}
         >
           {description}
         </div>
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="text-blue-500 text-sm mt-2"
-        >
-          {isExpanded ? t("show-less") : t("show-more")}
-        </button>
       </div>
     </motion.div>
   );

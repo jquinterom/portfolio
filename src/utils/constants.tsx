@@ -34,6 +34,11 @@ export const projects: ProjectType[] = [
     github: "https://github.com/jquinterom/shop-gadget-admin",
     urlProduction: "https://gadget-shop-omega.vercel.app/",
   },
+  {
+    image: "/images/project6.png",
+    tech: techProjects.Android,
+    github: "https://github.com/jquinterom/rn-shop",
+  },
 ];
 
 export const sections = ["home", "projects", "skills", "tech-stack"];

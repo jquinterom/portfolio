@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
@@ -10,29 +10,32 @@ import Nav from "../components/Nav";
 import ToggleTheme from "../components/common/ToggleTheme";
 import LocalSwitcher from "../components/common/LocalSwitcher";
 
-
 export default function Home() {
-  const [activeSection, setActiveSection] = useState('home')
+  const [activeSection, setActiveSection] = useState("home");
 
-  const sections = ['home', 'projects', 'skills', 'tech-stack']
+  const sections = ["home", "projects", "skills", "tech-stack"];
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 300
+      const scrollPosition = window.scrollY + 300;
 
       for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element && scrollPosition >= element.offsetTop && scrollPosition < element.offsetTop + element.offsetHeight) {
-          setActiveSection(section)
-          break
+        const element = document.getElementById(section);
+        if (
+          element &&
+          scrollPosition >= element.offsetTop &&
+          scrollPosition < element.offsetTop + element.offsetHeight
+        ) {
+          setActiveSection(section);
+          break;
         }
       }
-    }
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   return (
     <div className="min-h-screen dark:bg-gray-900 dark:text-white bg-slate-100 text-black">
@@ -45,7 +48,6 @@ export default function Home() {
       </header>
 
       <main>
-
         <HomeSection />
 
         <ProjectsSection />
@@ -56,7 +58,6 @@ export default function Home() {
       </main>
 
       <Footer />
-
     </div>
   );
 }

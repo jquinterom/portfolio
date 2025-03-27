@@ -34,6 +34,10 @@
       "fifth-project": {
         "title": "Gadget shop",
         "description": "Aplicación web para gestionar ordenes, y productos de la tienda."
+      },
+      "sixth-project": {
+        "title": "Gadget app",
+        "description": "Aplicación móvil para gestionar ordenes, y productos de la tienda."
       }
     }
   },

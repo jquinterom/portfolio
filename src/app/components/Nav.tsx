@@ -17,14 +17,14 @@ const Nav = ({ activeSection }: NavProps) => {
   };
 
   return (
-    <nav className="container mx-auto py-4 pe-24">
+    <nav className="container mx-auto py-4 md:px-24">
       <div className="flex justify-between items-center md:hidden ps-2">
         <button onClick={toggleMobileMenu} aria-label="Toggle Menu">
           {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
 
-      <ul className="h-9 hidden md:flex justify-center space-x-8 bg-opacity-90 backdrop-blur-sm px-24">
+      <ul className="h-9 hidden md:flex justify-center items-center space-x-8 bg-opacity-90 backdrop-blur-sm">
         {sections.map((item) => (
           <li key={item}>
             <button
