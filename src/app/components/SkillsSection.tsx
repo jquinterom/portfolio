@@ -1,14 +1,14 @@
-import { skills } from '@/utils/constants'
-import { motion } from 'framer-motion'
-import { useTranslations } from 'next-intl'
+import { skills } from "@/utils/constants";
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const SkillsSection = () => {
-  const t = useTranslations('SkillsSection')
+  const t = useTranslations("SkillsSection");
 
   return (
     <section id="skills" className="py-20  dark:bg-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-center">{t('title')}</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">{t("title")}</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {skills.map((skill) => (
             <motion.div
@@ -24,7 +24,7 @@ const SkillsSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SkillsSection
+export default SkillsSection;

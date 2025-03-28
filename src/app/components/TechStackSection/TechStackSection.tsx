@@ -1,4 +1,4 @@
-import { Database, Icon, Server, Smartphone } from "react-feather";
+import { Database, type Icon, Server, Smartphone } from "react-feather";
 import { TechIcon } from "./TechIcon";
 import { FaAndroid } from "react-icons/fa";
 import {

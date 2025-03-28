@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ProjectType } from "@/utils/types";
+import { type ProjectType } from "@/utils/types";
 import Link from "next/link";
 import { GitHub } from "react-feather";
 import { isValidUrl } from "@/utils/isValidUrl";

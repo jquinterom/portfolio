@@ -1,6 +1,6 @@
 import { FaAndroid, FaLaravel } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
-import { ProjectType } from "./types";
+import { type ProjectType } from "./types";
 
 const techProjects = {
   NextJs: <RiNextjsFill size={24} />,
