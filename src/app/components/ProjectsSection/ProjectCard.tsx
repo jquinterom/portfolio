@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { ProjectType } from "@/utils/types";
 import Link from "next/link";
 import { GitHub } from "react-feather";
@@ -28,8 +27,6 @@ const ImageCard = ({ image, title }: { image: string; title: string }) => {
 };
 
 const ProjectCard = ({ index, title, description, project }: CardProps) => {
-  const t = useTranslations("ProjectsSection.cards");
-
   const textRef = useRef<HTMLDivElement>(null);
 
   return (
