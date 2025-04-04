@@ -19,8 +19,8 @@ const ImageCard = ({ image, title }: { image: string; title: string }) => {
       src={image}
       alt={title}
       className="w-full h-48 object-cover"
-      height={200}
-      width={300}
+      height={500}
+      width={700}
       priority
     />
   );

@@ -39,6 +39,12 @@ export const projects: ProjectType[] = [
     tech: techProjects.Android,
     github: "https://github.com/jquinterom/rn-shop",
   },
+  {
+    image: "/images/project7.png",
+    tech: techProjects.NextJs,
+    github: "https://github.com/jquinterom/tickets",
+    urlProduction: "https://tickets-ten.vercel.app/",
+  },
 ];
 
 export const sections = ["home", "projects", "skills", "tech-stack"];

@@ -36,6 +36,11 @@ function ProjectProps(index: number) {
         title: t("cards.sixth-project.title"),
         description: t("cards.sixth-project.description"),
       };
+    case 6:
+      return {
+        title: t("cards.seventh-project.title"),
+        description: t("cards.seventh-project.description"),
+      };
     default:
       return {
         title: t("cards.first-project.title"),
