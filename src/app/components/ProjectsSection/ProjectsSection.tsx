@@ -2,51 +2,15 @@ import { projects } from "@/utils/constants";
 import ProjectCard from "./ProjectCard";
 import { useTranslations } from "next-intl";
 
-function ProjectProps(index: number) {
+function ProjectProps(index: string) {
   const t = useTranslations("ProjectsSection");
 
-  switch (index) {
-    case 0:
-      return {
-        title: t("cards.first-project.title"),
-        description: t("cards.first-project.description"),
-      };
-    case 1:
-      return {
-        title: t("cards.second-project.title"),
-        description: t("cards.second-project.description"),
-      };
-    case 2:
-      return {
-        title: t("cards.third-project.title"),
-        description: t("cards.third-project.description"),
-      };
-    case 3:
-      return {
-        title: t("cards.fourth-project.title"),
-        description: t("cards.fourth-project.description"),
-      };
-    case 4:
-      return {
-        title: t("cards.fifth-project.title"),
-        description: t("cards.fifth-project.description"),
-      };
-    case 5:
-      return {
-        title: t("cards.sixth-project.title"),
-        description: t("cards.sixth-project.description"),
-      };
-    case 6:
-      return {
-        title: t("cards.seventh-project.title"),
-        description: t("cards.seventh-project.description"),
-      };
-    default:
-      return {
-        title: t("cards.first-project.title"),
-        description: t("cards.first-project.description"),
-      };
-  }
+  const randomText = `cards.${index}`;
+
+  return {
+    title: t(`${randomText}.title`),
+    description: t(`${randomText}.description`),
+  };
 }
 
 const ProjectsSection = () => {
@@ -57,14 +21,14 @@ const ProjectsSection = () => {
         <h2 className="text-3xl font-bold mb-12 text-center">{t("title")}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => {
-            const projectProps = ProjectProps(index);
+            const { title, description } = ProjectProps(project.index || "");
 
             return (
               <ProjectCard
                 key={index}
                 index={index}
-                title={projectProps.title}
-                description={projectProps.description}
+                title={title}
+                description={description}
                 project={project}
               />
             );

@@ -3,4 +3,5 @@ export interface ProjectType {
   tech: React.ReactNode;
   github?: string;
   urlProduction?: string;
+  index: string;
 }
