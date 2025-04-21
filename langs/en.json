@@ -42,6 +42,10 @@
       "seventh-project": {
         "title": "Tickets app",
         "description": "Web application to manage event tickets."
+      },
+      "eighth-project": {
+        "title": "Instacamp",
+        "description": "Clone of Instagram for the web with the functionality of publishing photos, texts and more."
       }
     }
   },

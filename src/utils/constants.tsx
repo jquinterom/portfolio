@@ -52,6 +52,12 @@ export const projects: ProjectType[] = [
     urlProduction: "https://tickets-ten.vercel.app/",
     index: "seventh-project",
   },
+  {
+    image: "/images/project8.png",
+    tech: techProjects.Laravel,
+    github: "https://github.com/jquinterom/instacamp",
+    index: "eighth-project",
+  },
 ];
 
 export const sections = ["home", "projects", "skills", "tech-stack"];
