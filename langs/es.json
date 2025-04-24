@@ -46,6 +46,10 @@
       "eighth-project": {
         "title": "Instacamp",
         "description": "Clon de Instagram para la web con la funcionalidad de publicar fotos, textos y más."
+      },
+      "ninth-project": {
+        "title": "Nearby Parking",
+        "description": "Aplicación Android para encontrar el parking más cercano usando GPS y radio definido por el usuario."
       }
     }
   },

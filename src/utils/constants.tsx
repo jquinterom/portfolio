@@ -58,15 +58,21 @@ export const projects: ProjectType[] = [
     github: "https://github.com/jquinterom/instacamp",
     index: "eighth-project",
   },
+  {
+    image: "/images/project9.png",
+    tech: techProjects.Android,
+    github: "https://github.com/jquinterom/nearbyparking",
+    index: "ninth-project",
+  },
 ];
 
 export const sections = ["home", "projects", "skills", "tech-stack"];
 
 export const skills = [
   "React.js",
-  "React Native",
   "Next.js",
   "Android Development",
+  "React Native",
   "Laravel",
   "Mysql",
 ];
