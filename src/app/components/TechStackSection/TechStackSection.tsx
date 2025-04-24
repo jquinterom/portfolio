@@ -46,7 +46,11 @@ interface TechStackSectionProps {
 const techStack: TechStackSectionProps = {
   frontend: [
     { name: "React", icon: SiReact, color: "text-blue-500" },
-    { name: "Next.js", icon: RiNextjsLine, color: "text-gray-300" },
+    {
+      name: "Next.js",
+      icon: RiNextjsLine,
+      color: "text-gray-700 dark:text-gray-300",
+    },
     { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
     { name: "JavaScript", icon: RiJavascriptFill, color: "text-yellow-400" },
     { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "text-cyan-400" },
@@ -107,12 +111,13 @@ const TechStackSection = () => {
               <Server className="mr-2" /> Front-end
             </h3>
             <div className="grid grid-cols-4 md:grid-cols-10 gap-4">
-              {techStack.frontend.map((tech) => (
+              {techStack.frontend.map((tech, index) => (
                 <TechIcon
                   key={tech.name}
                   name={tech.name}
                   icon={tech.icon}
                   color={tech.color}
+                  index={index}
                 />
               ))}
             </div>
@@ -122,12 +127,13 @@ const TechStackSection = () => {
               <Smartphone className="mr-2" /> Android
             </h3>
             <div className="grid grid-cols-4 md:grid-cols-10 gap-4">
-              {techStack.android.map((tech) => (
+              {techStack.android.map((tech, index) => (
                 <TechIcon
                   key={tech.name}
                   name={tech.name}
                   icon={tech.icon}
                   color={tech.color}
+                  index={index}
                 />
               ))}
             </div>
@@ -137,12 +143,13 @@ const TechStackSection = () => {
               <Database className="mr-2" /> Back-end
             </h3>
             <div className="grid grid-cols-4 md:grid-cols-10 gap-4">
-              {techStack.backend.map((tech) => (
+              {techStack.backend.map((tech, index) => (
                 <TechIcon
                   key={tech.name}
                   name={tech.name}
                   icon={tech.icon}
                   color={tech.color}
+                  index={index}
                 />
               ))}
             </div>
