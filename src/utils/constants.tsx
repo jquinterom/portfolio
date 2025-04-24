@@ -2,7 +2,7 @@ import { FaAndroid, FaLaravel } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { type ProjectType } from "./types";
 
-const techProjects = {
+export const techProjects = {
   NextJs: <RiNextjsFill size={24} />,
   Android: <FaAndroid size={24} />,
   Laravel: <FaLaravel size={24} />,

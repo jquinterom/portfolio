@@ -51,7 +51,8 @@
         "title": "Nearby Parking",
         "description": "Aplicación Android para encontrar el parking más cercano usando GPS y radio definido por el usuario."
       }
-    }
+    },
+    "Technologies": "Tecnologías"
   },
   "MiniProjectsSection": {
     "title": "Mini Proyectos",
