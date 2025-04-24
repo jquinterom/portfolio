@@ -10,22 +10,26 @@ const techProjects = {
 
 export const projects: ProjectType[] = [
   {
+    id: 1,
     image: "/images/project1.jpg",
     tech: techProjects.Android,
     index: "first-project",
   },
   {
+    id: 2,
     image: "/images/project2.jpg",
     tech: techProjects.Laravel,
     urlProduction: "https://naranjaerp.com/",
     index: "second-project",
   },
   {
+    id: 3,
     image: "/images/project3.jpg",
     tech: techProjects.NextJs,
     index: "third-project",
   },
   {
+    id: 4,
     image: "/images/project4.png",
     tech: techProjects.NextJs,
     github: "https://github.com/jquinterom/seek-todo",
@@ -33,6 +37,7 @@ export const projects: ProjectType[] = [
     index: "fourth-project",
   },
   {
+    id: 5,
     image: "/images/project5.png",
     tech: techProjects.NextJs,
     github: "https://github.com/jquinterom/shop-gadget-admin",
@@ -40,12 +45,14 @@ export const projects: ProjectType[] = [
     index: "fifth-project",
   },
   {
+    id: 6,
     image: "/images/project6.png",
     tech: techProjects.Android,
     github: "https://github.com/jquinterom/rn-shop",
     index: "sixth-project",
   },
   {
+    id: 7,
     image: "/images/project7.png",
     tech: techProjects.NextJs,
     github: "https://github.com/jquinterom/tickets",
@@ -53,12 +60,14 @@ export const projects: ProjectType[] = [
     index: "seventh-project",
   },
   {
+    id: 8,
     image: "/images/project8.png",
     tech: techProjects.Laravel,
     github: "https://github.com/jquinterom/instacamp",
     index: "eighth-project",
   },
   {
+    id: 9,
     image: "/images/project9.png",
     tech: techProjects.Android,
     github: "https://github.com/jquinterom/nearbyparking",
