@@ -50,6 +50,10 @@
       "ninth-project": {
         "title": "Nearby Parking",
         "description": "Android application to find the nearest parking spots using the GPS and radius defined by the user."
+      },
+      "tenth-project": {
+        "title": "Nearby Parking Web",
+        "description": "Web application to find the nearest parking spots using the location and radius defined by the user."
       }
     },
     "Technologies": "Technologies"

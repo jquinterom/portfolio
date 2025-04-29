@@ -50,6 +50,10 @@
       "ninth-project": {
         "title": "Nearby Parking",
         "description": "Aplicación Android para encontrar el parking más cercano usando GPS y radio definido por el usuario."
+      },
+      "tenth-project": {
+        "title": "Nearby Parking Web",
+        "description": "Aplicación web para encontrar el parking más cercano usando localización y radio definidos por el usuario."
       }
     },
     "Technologies": "Tecnologías"

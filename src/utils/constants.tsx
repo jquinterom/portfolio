@@ -73,6 +73,13 @@ export const projects: ProjectType[] = [
     github: "https://github.com/jquinterom/nearbyparking",
     index: "ninth-project",
   },
+  {
+    id: 10,
+    image: "/images/project10.png",
+    tech: techProjects.NextJs,
+    github: "https://github.com/jquinterom/nearby-parking-web",
+    index: "tenth-project",
+  },
 ];
 
 export const sections = ["home", "projects", "skills", "tech-stack"];
