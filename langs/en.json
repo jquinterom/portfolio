@@ -54,6 +54,10 @@
       "tenth-project": {
         "title": "Nearby Parking Web",
         "description": "Web application to find the nearest parking spots using the location and radius defined by the user."
+      },
+      "eleventh-project": {
+        "title": "Rick and Morty",
+        "description": "Android application to know the characters of the Rick and Morty series, locations and episodes of this famous television series."
       }
     },
     "Technologies": "Technologies"

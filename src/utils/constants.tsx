@@ -81,6 +81,13 @@ export const projects: ProjectType[] = [
     index: "tenth-project",
     urlProduction: "https://nearby-parking-web.vercel.app/",
   },
+  {
+    id: 11,
+    image: "/images/project11.png",
+    tech: techProjects.Android,
+    github: "https://github.com/jquinterom/nearbyparking-android",
+    index: "eleventh-project",
+  },
 ];
 
 export const sections = ["home", "projects", "skills", "tech-stack"];
