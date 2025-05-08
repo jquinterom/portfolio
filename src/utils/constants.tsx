@@ -79,6 +79,7 @@ export const projects: ProjectType[] = [
     tech: techProjects.NextJs,
     github: "https://github.com/jquinterom/nearby-parking-web",
     index: "tenth-project",
+    urlProduction: "https://nearby-parking-web.vercel.app/",
   },
 ];
 
