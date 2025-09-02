@@ -24,6 +24,9 @@ import {
   SiReactquery,
   SiFigma,
   SiStripe,
+  SiNestjs,
+  SiMongodb,
+  SiPostgresql,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { BsAndroid, BsAndroid2, BsDatabase } from "react-icons/bs";
@@ -93,10 +96,13 @@ const techStack: TechStackSectionProps = {
     { name: "Laravel", icon: SiLaravel, color: "text-red-500" },
     { name: "PHP", icon: SiPhp, color: "text-purple-400" },
     { name: "Eloquent", icon: LiaLaravel, color: "text-red-400" },
-    { name: "Mysql", icon: SiMysql, color: "text-blue-500" },
     { name: "Rest Api", icon: MdHttp, color: "text-yellow-400" },
     { name: "Supabase", icon: SiSupabase, color: "text-green-500" },
     { name: "Stripe", icon: SiStripe, color: "text-purple-500" },
+    { name: "NestJs", icon: SiNestjs, color: "text-red-600" },
+    { name: "Mysql", icon: SiMysql, color: "text-blue-500" },
+    { name: "Mongodb", icon: SiMongodb, color: "text-green-600" },
+    { name: "Postgres", icon: SiPostgresql, color: "text-blue-400" },
   ],
 };
 
