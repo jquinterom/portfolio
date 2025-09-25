@@ -85,7 +85,7 @@ export const projects: ProjectType[] = [
     id: 11,
     image: "/images/project11.png",
     tech: techProjects.Android,
-    github: "https://github.com/jquinterom/nearbyparking-android",
+    github: "https://github.com/jquinterom/rickandmorty",
     index: "eleventh-project",
   },
 ];
