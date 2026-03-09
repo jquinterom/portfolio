@@ -27,6 +27,8 @@ import {
   SiNestjs,
   SiMongodb,
   SiPostgresql,
+   SiWordpress,
+   SiElementor
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { BsAndroid, BsAndroid2, BsDatabase } from "react-icons/bs";
@@ -57,6 +59,9 @@ const techStack: TechStackSectionProps = {
     { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
     { name: "JavaScript", icon: RiJavascriptFill, color: "text-yellow-400" },
     { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "text-cyan-400" },
+    { name : "Wordpress", icon: SiWordpress, color: "text-blue-400"},
+    { name : "WooCommerce", icon: SiWordpress, color: "text-purple-400"},
+    {name : "Elementor", icon: SiElementor, color: "text-purple-400"},
     { name: "GraphQL", icon: SiGraphql, color: "text-pink-600" },
     { name: "Storybook", icon: SiStorybook, color: "text-purple-600" },
     { name: "Jest", icon: SiJest, color: "text-red-600" },
